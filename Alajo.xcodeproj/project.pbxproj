@@ -10,6 +10,9 @@
 		043A392C2B978D680075050A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A392B2B978D680075050A /* HomeViewController.swift */; };
 		043A392E2B978D750075050A /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A392D2B978D750075050A /* FavoriteViewController.swift */; };
 		043A39302B978D800075050A /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A392F2B978D800075050A /* MoreViewController.swift */; };
+		043A39372B9790A00075050A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A39362B9790A00075050A /* HomeViewModel.swift */; };
+		043A393A2B9790F70075050A /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A39392B9790F70075050A /* FavoriteViewModel.swift */; };
+		043A393D2B97913B0075050A /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A393C2B97913B0075050A /* MoreViewModel.swift */; };
 		044500B02B977CBE00F67D39 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044500AF2B977CBE00F67D39 /* Home.storyboard */; };
 		0448D8ED2B8F5832000DAE9B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448D8EC2B8F5832000DAE9B /* TabBarController.swift */; };
 		0454C0422B8E43D800699900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0454C0412B8E43D800699900 /* AppDelegate.swift */; };
@@ -22,6 +25,9 @@
 		043A392B2B978D680075050A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		043A392D2B978D750075050A /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		043A392F2B978D800075050A /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		043A39362B9790A00075050A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		043A39392B9790F70075050A /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		043A393C2B97913B0075050A /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
 		044500AF2B977CBE00F67D39 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		0448D8EC2B8F5832000DAE9B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0454C03E2B8E43D800699900 /* Alajo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alajo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +49,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043A39312B9790090075050A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				043A393E2B9791A00075050A /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		043A39322B9790150075050A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		043A39332B97901B0075050A /* ViewModules */ = {
+			isa = PBXGroup;
+			children = (
+				043A39342B9790530075050A /* Root */,
+				043A39352B9790660075050A /* Home */,
+			);
+			path = ViewModules;
+			sourceTree = "<group>";
+		};
+		043A39342B9790530075050A /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				0448D8EC2B8F5832000DAE9B /* TabBarController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		043A39352B9790660075050A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				043A39362B9790A00075050A /* HomeViewModel.swift */,
+				043A392B2B978D680075050A /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		043A39382B9790D20075050A /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				043A39392B9790F70075050A /* FavoriteViewModel.swift */,
+				043A392D2B978D750075050A /* FavoriteViewController.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		043A393B2B9791240075050A /* More */ = {
+			isa = PBXGroup;
+			children = (
+				043A393C2B97913B0075050A /* MoreViewModel.swift */,
+				043A392F2B978D800075050A /* MoreViewController.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		043A393E2B9791A00075050A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				044500AF2B977CBE00F67D39 /* Home.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		0454C0352B8E43D800699900 = {
 			isa = PBXGroup;
 			children = (
@@ -64,11 +137,11 @@
 			children = (
 				0454C0412B8E43D800699900 /* AppDelegate.swift */,
 				0454C0432B8E43D800699900 /* SceneDelegate.swift */,
-				0448D8EC2B8F5832000DAE9B /* TabBarController.swift */,
-				043A392B2B978D680075050A /* HomeViewController.swift */,
-				043A392D2B978D750075050A /* FavoriteViewController.swift */,
-				043A392F2B978D800075050A /* MoreViewController.swift */,
-				044500AF2B977CBE00F67D39 /* Home.storyboard */,
+				043A39322B9790150075050A /* Models */,
+				043A39312B9790090075050A /* Views */,
+				043A39332B97901B0075050A /* ViewModules */,
+				043A39382B9790D20075050A /* Favorite */,
+				043A393B2B9791240075050A /* More */,
 				0454C04A2B8E43E500699900 /* Assets.xcassets */,
 				0454C04C2B8E43E500699900 /* LaunchScreen.storyboard */,
 				0454C04F2B8E43E500699900 /* Info.plist */,
@@ -147,11 +220,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043A393D2B97913B0075050A /* MoreViewModel.swift in Sources */,
 				0448D8ED2B8F5832000DAE9B /* TabBarController.swift in Sources */,
 				0454C0422B8E43D800699900 /* AppDelegate.swift in Sources */,
+				043A39372B9790A00075050A /* HomeViewModel.swift in Sources */,
 				0454C0442B8E43D800699900 /* SceneDelegate.swift in Sources */,
 				043A39302B978D800075050A /* MoreViewController.swift in Sources */,
 				043A392C2B978D680075050A /* HomeViewController.swift in Sources */,
+				043A393A2B9790F70075050A /* FavoriteViewModel.swift in Sources */,
 				043A392E2B978D750075050A /* FavoriteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

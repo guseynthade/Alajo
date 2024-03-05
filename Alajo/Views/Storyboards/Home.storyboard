@@ -28,7 +28,7 @@
                         <viewLayoutGuide key="safeArea" id="atu-Pd-M2h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="homekit" catalog="system" id="kjO-fm-2iz">
+                    <tabBarItem key="tabBarItem" tag="1" title="Home" selectedImage="homekit" catalog="system" id="kjO-fm-2iz">
                         <color key="badgeColor" name="AccentColor"/>
                     </tabBarItem>
                 </viewController>
