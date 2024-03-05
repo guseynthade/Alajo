@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -16,20 +16,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKe-9M-peJ">
-                                <rect key="frame" x="175" y="416" width="46" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8g-p6-jTM">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="98"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhj-kZ-neR">
+                                        <rect key="frame" x="345" y="66" width="24" height="24"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="AYz-IX-0h7"/>
+                                            <constraint firstAttribute="width" constant="24" id="R3H-jL-x3P"/>
+                                        </constraints>
+                                        <color key="tintColor" name="brand"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="search">
+                                            <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTk-ZN-omY">
+                                        <rect key="frame" x="24" y="66" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="69j-zs-MVF"/>
+                                            <constraint firstAttribute="height" constant="24" id="UnM-Zf-gtp"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="sort"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="bg"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="eTk-ZN-omY" secondAttribute="bottom" constant="8" id="Nom-ge-6IF"/>
+                                    <constraint firstAttribute="height" constant="98" id="Vl4-cw-BYL"/>
+                                    <constraint firstAttribute="bottom" secondItem="rhj-kZ-neR" secondAttribute="bottom" constant="8" id="pHV-RR-IMn"/>
+                                    <constraint firstAttribute="trailing" secondItem="rhj-kZ-neR" secondAttribute="trailing" constant="24" id="rPb-IS-qxt"/>
+                                    <constraint firstItem="eTk-ZN-omY" firstAttribute="leading" secondItem="W8g-p6-jTM" secondAttribute="leading" constant="24" id="syu-BH-nLZ"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hzh-Cx-Riu">
+                                <rect key="frame" x="24" y="122" width="345" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eJU-Ln-zhd">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="atu-Pd-M2h"/>
                         <color key="backgroundColor" name="bg"/>
+                        <constraints>
+                            <constraint firstItem="atu-Pd-M2h" firstAttribute="trailing" secondItem="W8g-p6-jTM" secondAttribute="trailing" id="6dr-Az-cbQ"/>
+                            <constraint firstItem="Hzh-Cx-Riu" firstAttribute="top" secondItem="W8g-p6-jTM" secondAttribute="bottom" constant="24" id="9SX-W3-FhK"/>
+                            <constraint firstItem="Hzh-Cx-Riu" firstAttribute="leading" secondItem="atu-Pd-M2h" secondAttribute="leading" constant="24" id="XZv-wF-YiT"/>
+                            <constraint firstItem="atu-Pd-M2h" firstAttribute="trailing" secondItem="Hzh-Cx-Riu" secondAttribute="trailing" constant="24" id="mz1-uj-vwM"/>
+                            <constraint firstItem="atu-Pd-M2h" firstAttribute="bottom" secondItem="Hzh-Cx-Riu" secondAttribute="bottom" id="qM1-hg-TJi"/>
+                            <constraint firstItem="W8g-p6-jTM" firstAttribute="leading" secondItem="atu-Pd-M2h" secondAttribute="leading" id="skU-od-7xy"/>
+                            <constraint firstItem="W8g-p6-jTM" firstAttribute="top" secondItem="RBC-oM-pjQ" secondAttribute="top" id="wHm-qY-K1a"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="home" id="kjO-fm-2iz">
                         <color key="badgeColor" name="brand"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="mainCollection" destination="Hzh-Cx-Riu" id="gXi-9g-yex"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPD-oK-Ekd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,7 +105,7 @@
                         <viewLayoutGuide key="safeArea" id="s8R-GK-7qP"/>
                         <color key="backgroundColor" name="bg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="favorite" id="DEG-Px-WtK">
+                    <tabBarItem key="tabBarItem" title="" image="favorite" id="DEG-Px-WtK">
                         <color key="badgeColor" name="brand"/>
                     </tabBarItem>
                 </viewController>
@@ -81,7 +132,7 @@
                         <viewLayoutGuide key="safeArea" id="qPu-gH-NW7"/>
                         <color key="backgroundColor" name="bg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="more" id="Nwq-OX-cAo">
+                    <tabBarItem key="tabBarItem" title="" image="more" id="Nwq-OX-cAo">
                         <color key="badgeColor" name="brand"/>
                     </tabBarItem>
                 </viewController>
@@ -118,6 +169,8 @@
         <image name="favorite" width="24" height="24"/>
         <image name="home" width="24" height="24"/>
         <image name="more" width="24" height="24"/>
+        <image name="search" width="24" height="24"/>
+        <image name="sort" width="24" height="24"/>
         <namedColor name="bg">
             <color red="0.86299997568130493" green="0.87099999189376831" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
