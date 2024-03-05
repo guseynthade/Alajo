@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,10 +25,10 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="atu-Pd-M2h"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="Home" selectedImage="homekit" catalog="system" id="kjO-fm-2iz">
-                        <color key="badgeColor" name="AccentColor"/>
+                    <tabBarItem key="tabBarItem" title="" image="home" id="kjO-fm-2iz">
+                        <color key="badgeColor" name="brand"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPD-oK-Ekd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -53,10 +52,10 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s8R-GK-7qP"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" selectedImage="pencil" systemItem="favorites" id="DEG-Px-WtK">
-                        <color key="badgeColor" name="AccentColor"/>
+                    <tabBarItem key="tabBarItem" image="favorite" id="DEG-Px-WtK">
+                        <color key="badgeColor" name="brand"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNK-aa-car" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -80,10 +79,10 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qPu-gH-NW7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" selectedImage="square.and.pencil.circle.fill" catalog="system" systemItem="more" id="Nwq-OX-cAo">
-                        <color key="badgeColor" name="AccentColor"/>
+                    <tabBarItem key="tabBarItem" image="more" id="Nwq-OX-cAo">
+                        <color key="badgeColor" name="brand"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abw-hl-Ek0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -98,7 +97,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" name="AccentColor"/>
+                        <color key="tintColor" name="brand"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="brand"/>
+                        <tabBarAppearance key="standardAppearance"/>
+                        <tabBarAppearance key="scrollEdgeAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="s0Y-BZ-ntF" kind="relationship" relationship="viewControllers" id="9rE-k8-Cdt"/>
@@ -112,14 +115,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="homekit" catalog="system" width="128" height="104"/>
-        <image name="pencil" width="128" height="128"/>
-        <image name="square.and.pencil.circle.fill" catalog="system" width="128" height="123"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="favorite" width="24" height="24"/>
+        <image name="home" width="24" height="24"/>
+        <image name="more" width="24" height="24"/>
+        <namedColor name="bg">
+            <color red="0.86299997568130493" green="0.87099999189376831" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="brand">
+            <color red="1" green="0.10199999809265137" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

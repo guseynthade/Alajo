@@ -8,22 +8,25 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    private let viewModel = HomeViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        confViewModel()
+        viewModel.getPopularMovieList()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    fileprivate func confViewModel() {
+        viewModel.successCallback = { [weak self] in
+            guard let self = self else {return}
+            print("success")
+        }
+        
+        viewModel.errorCallback = { [weak self] errorString in
+            guard let self = self else {return}
+            print(errorString)
+        }
     }
-    */
 
 }

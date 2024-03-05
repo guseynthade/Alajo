@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Alamofire
 
 class NetworkManager {
     static let shared = NetworkManager()
@@ -16,7 +15,7 @@ class NetworkManager {
         url: String,
         header: [String: String] = [:],
         body: [String: Any] = [:],
-        method: HTTPMethod,
+        method: HTTPMethods,
         completion: @escaping((Result<T,ErrorTypes>) -> Void)) {
             let session = URLSession.shared
             guard let url = URL(string: url) else {return}

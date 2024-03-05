@@ -11,6 +11,9 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tabBar.isTranslucent = false
+        tabBar.backgroundColor = UIColor(named: "bg")
 
         // Do any additional setup after loading the view.
     }

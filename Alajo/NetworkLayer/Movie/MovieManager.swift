@@ -8,19 +8,21 @@
 import Foundation
 
 class MovieManager {
-    static let shared = CommentManager()
+    static let shared = MovieManager()
     
-//    func getCommentList(complete: @escaping(([Comment]?, String?) -> Void)) {
-//        NetworkManager.shared.request(
-//            type: [Comment].self,
-//            url: CommentHelper.comments.path,
-//            method: .get) { response in
-//            switch response {
-//            case .success(let data):
-//                complete(data, nil)
-//            case .failure(let error):
-//                complete(nil, error.rawValue)
-//            }
-//        }
-//    }
+    func getPopularMovieList(pageID: Int, complete: @escaping((PopularMovieModel?, String?) -> Void)) {
+        let url = "\(MovieHelper.popular.path)\(pageID)"
+        NetworkManager.shared.request(
+            type: PopularMovieModel.self,
+            url: url,
+            header: NetworkHelper.shared.header,
+            method: .get) { response in
+            switch response {
+            case .success(let data):
+                complete(data, nil)
+            case .failure(let error):
+                complete(nil, error.rawValue)
+            }
+        }
+    }
 }

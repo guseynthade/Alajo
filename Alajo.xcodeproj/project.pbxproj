@@ -17,6 +17,7 @@
 		043A394C2B97941A0075050A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A39452B97941A0075050A /* NetworkManager.swift */; };
 		043A394D2B97941A0075050A /* MovieHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A39472B97941A0075050A /* MovieHelper.swift */; };
 		043A394E2B97941A0075050A /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A39482B97941A0075050A /* MovieManager.swift */; };
+		043A39502B97B72C0075050A /* PopularMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A394F2B97B72C0075050A /* PopularMovieModel.swift */; };
 		044500B02B977CBE00F67D39 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044500AF2B977CBE00F67D39 /* Home.storyboard */; };
 		0448D8ED2B8F5832000DAE9B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448D8EC2B8F5832000DAE9B /* TabBarController.swift */; };
 		0454C0422B8E43D800699900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0454C0412B8E43D800699900 /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 		043A39452B97941A0075050A /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		043A39472B97941A0075050A /* MovieHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieHelper.swift; sourceTree = "<group>"; };
 		043A39482B97941A0075050A /* MovieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
+		043A394F2B97B72C0075050A /* PopularMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieModel.swift; sourceTree = "<group>"; };
 		044500AF2B977CBE00F67D39 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		0448D8EC2B8F5832000DAE9B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0454C03E2B8E43D800699900 /* Alajo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alajo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 		043A39322B9790150075050A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				043A394F2B97B72C0075050A /* PopularMovieModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				043A39372B9790A00075050A /* HomeViewModel.swift in Sources */,
 				043A394B2B97941A0075050A /* NetworkHelper.swift in Sources */,
 				0454C0442B8E43D800699900 /* SceneDelegate.swift in Sources */,
+				043A39502B97B72C0075050A /* PopularMovieModel.swift in Sources */,
 				043A394D2B97941A0075050A /* MovieHelper.swift in Sources */,
 				043A39302B978D800075050A /* MoreViewController.swift in Sources */,
 				043A392C2B978D680075050A /* HomeViewController.swift in Sources */,
