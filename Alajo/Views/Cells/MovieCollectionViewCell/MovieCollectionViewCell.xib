@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="185" height="230"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EFg-bM-ZQk">
-                        <rect key="frame" x="0.0" y="0.0" width="185" height="230"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EFg-bM-ZQk">
+                        <rect key="frame" x="16" y="0.0" width="153" height="198"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="d2Q-UE-k4y">
                             <size key="itemSize" width="128" height="128"/>
@@ -30,9 +30,9 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="EFg-bM-ZQk" secondAttribute="bottom" id="77w-Ak-yIW"/>
-                <constraint firstItem="EFg-bM-ZQk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="P5T-hy-KTn"/>
-                <constraint firstAttribute="trailing" secondItem="EFg-bM-ZQk" secondAttribute="trailing" id="ZZA-HB-d4k"/>
+                <constraint firstAttribute="bottom" secondItem="EFg-bM-ZQk" secondAttribute="bottom" constant="32" id="77w-Ak-yIW"/>
+                <constraint firstItem="EFg-bM-ZQk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="P5T-hy-KTn"/>
+                <constraint firstAttribute="trailing" secondItem="EFg-bM-ZQk" secondAttribute="trailing" constant="16" id="ZZA-HB-d4k"/>
                 <constraint firstItem="EFg-bM-ZQk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="l3a-0X-zxk"/>
             </constraints>
             <size key="customSize" width="185" height="230"/>
