@@ -51,8 +51,8 @@
                                     <constraint firstItem="eTk-ZN-omY" firstAttribute="leading" secondItem="W8g-p6-jTM" secondAttribute="leading" constant="24" id="syu-BH-nLZ"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hzh-Cx-Riu">
-                                <rect key="frame" x="24" y="122" width="345" height="647"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hzh-Cx-Riu">
+                                <rect key="frame" x="0.0" y="122" width="393" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eJU-Ln-zhd">
                                     <size key="itemSize" width="128" height="128"/>
@@ -68,8 +68,8 @@
                         <constraints>
                             <constraint firstItem="atu-Pd-M2h" firstAttribute="trailing" secondItem="W8g-p6-jTM" secondAttribute="trailing" id="6dr-Az-cbQ"/>
                             <constraint firstItem="Hzh-Cx-Riu" firstAttribute="top" secondItem="W8g-p6-jTM" secondAttribute="bottom" constant="24" id="9SX-W3-FhK"/>
-                            <constraint firstItem="Hzh-Cx-Riu" firstAttribute="leading" secondItem="atu-Pd-M2h" secondAttribute="leading" constant="24" id="XZv-wF-YiT"/>
-                            <constraint firstItem="atu-Pd-M2h" firstAttribute="trailing" secondItem="Hzh-Cx-Riu" secondAttribute="trailing" constant="24" id="mz1-uj-vwM"/>
+                            <constraint firstItem="Hzh-Cx-Riu" firstAttribute="leading" secondItem="atu-Pd-M2h" secondAttribute="leading" id="XZv-wF-YiT"/>
+                            <constraint firstItem="atu-Pd-M2h" firstAttribute="trailing" secondItem="Hzh-Cx-Riu" secondAttribute="trailing" id="mz1-uj-vwM"/>
                             <constraint firstItem="atu-Pd-M2h" firstAttribute="bottom" secondItem="Hzh-Cx-Riu" secondAttribute="bottom" id="qM1-hg-TJi"/>
                             <constraint firstItem="W8g-p6-jTM" firstAttribute="leading" secondItem="atu-Pd-M2h" secondAttribute="leading" id="skU-od-7xy"/>
                             <constraint firstItem="W8g-p6-jTM" firstAttribute="top" secondItem="RBC-oM-pjQ" secondAttribute="top" id="wHm-qY-K1a"/>

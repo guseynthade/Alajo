@@ -21,7 +21,8 @@ class MovieCollectionViewCell: UICollectionViewCell {
         movieCollection.dataSource = self
         movieCollection.delegate = self
         
-        movieCollection.register(UINib(nibName: "MovieCell", bundle: nil), forCellWithReuseIdentifier: "MovieCell")
+
+        movieCollection.registerNib(with: "MovieCell")
     }
 
 }
@@ -36,7 +37,8 @@ extension MovieCollectionViewCell: UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
+
+        let cell = collectionView.dequeCell(cellClass: MovieCell.self, indexPath: indexPath)
         return cell
     }
     

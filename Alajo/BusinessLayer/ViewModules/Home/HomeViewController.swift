@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
         mainCollection.delegate = self
         mainCollection.dataSource = self
         
-        mainCollection.register(UINib(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieCollectionViewCell")
+        mainCollection.registerNib(with: "MovieCollectionViewCell")
     }
     
     fileprivate func confViewModel() {
@@ -55,7 +55,7 @@ extension HomeViewController: UICollectionViewDelegate,
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
+        let cell = collectionView.dequeCell(cellClass: MovieCollectionViewCell.self, indexPath: indexPath)
         
         return cell
     }

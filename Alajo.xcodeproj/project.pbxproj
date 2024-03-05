@@ -28,6 +28,7 @@
 		0454C0442B8E43D800699900 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0454C0432B8E43D800699900 /* SceneDelegate.swift */; };
 		0454C04B2B8E43E500699900 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0454C04A2B8E43E500699900 /* Assets.xcassets */; };
 		0454C04E2B8E43E500699900 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0454C04C2B8E43E500699900 /* LaunchScreen.storyboard */; };
+		045E8BEE2B97E12C00A65B6D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E8BED2B97E12C00A65B6D /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		0454C04A2B8E43E500699900 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0454C04D2B8E43E500699900 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0454C04F2B8E43E500699900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		045E8BED2B97E12C00A65B6D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,8 @@
 			children = (
 				043A39342B9790530075050A /* Root */,
 				043A39352B9790660075050A /* Home */,
+				043A39382B9790D20075050A /* Favorite */,
+				043A393B2B9791240075050A /* More */,
 			);
 			path = ViewModules;
 			sourceTree = "<group>";
@@ -211,17 +215,32 @@
 			children = (
 				0454C0412B8E43D800699900 /* AppDelegate.swift */,
 				0454C0432B8E43D800699900 /* SceneDelegate.swift */,
+				045E8BEF2B97E1FE00A65B6D /* BusinessLayer */,
 				043A393F2B97941A0075050A /* NetworkLayer */,
-				043A39322B9790150075050A /* Models */,
-				043A39312B9790090075050A /* Views */,
-				043A39332B97901B0075050A /* ViewModules */,
-				043A39382B9790D20075050A /* Favorite */,
-				043A393B2B9791240075050A /* More */,
+				045E8BEC2B97E11000A65B6D /* Helpers */,
 				0454C04A2B8E43E500699900 /* Assets.xcassets */,
 				0454C04C2B8E43E500699900 /* LaunchScreen.storyboard */,
 				0454C04F2B8E43E500699900 /* Info.plist */,
 			);
 			path = Alajo;
+			sourceTree = "<group>";
+		};
+		045E8BEC2B97E11000A65B6D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				045E8BED2B97E12C00A65B6D /* Extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		045E8BEF2B97E1FE00A65B6D /* BusinessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				043A39322B9790150075050A /* Models */,
+				043A39312B9790090075050A /* Views */,
+				043A39332B97901B0075050A /* ViewModules */,
+			);
+			path = BusinessLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +326,7 @@
 				0454C0442B8E43D800699900 /* SceneDelegate.swift in Sources */,
 				043A39502B97B72C0075050A /* PopularMovieModel.swift in Sources */,
 				043A394D2B97941A0075050A /* MovieHelper.swift in Sources */,
+				045E8BEE2B97E12C00A65B6D /* Extension.swift in Sources */,
 				043A395A2B97D53C0075050A /* MovieCell.swift in Sources */,
 				043A39302B978D800075050A /* MoreViewController.swift in Sources */,
 				043A392C2B978D680075050A /* HomeViewController.swift in Sources */,
