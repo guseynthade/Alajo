@@ -17,26 +17,72 @@
                 <rect key="frame" x="0.0" y="0.0" width="182" height="275"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlp-Rz-4Dd">
-                        <rect key="frame" x="8" y="0.0" width="166" height="275"/>
-                        <color key="backgroundColor" name="brand"/>
-                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W8h-iq-Jsn">
+                        <rect key="frame" x="2" y="0.0" width="178" height="275"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GLs-ix-hRY">
+                                <rect key="frame" x="0.0" y="0.0" width="178" height="215"/>
+                                <color key="backgroundColor" name="brand"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="M54-px-04s">
+                                <rect key="frame" x="0.0" y="223" width="178" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHX-Le-puZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="178" height="33.666666666666664"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Avatar: The Last Airbender">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" metaFont="system" size="14"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="20" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feb 22, 2024" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8s-TC-SO1">
+                                        <rect key="frame" x="0.0" y="37.666666666666686" width="178" height="14.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                        <color key="textColor" name="text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="GLs-ix-hRY" firstAttribute="leading" secondItem="W8h-iq-Jsn" secondAttribute="leading" id="8bB-NI-Ohc"/>
+                            <constraint firstAttribute="bottom" secondItem="M54-px-04s" secondAttribute="bottom" id="RY2-ou-dSa"/>
+                            <constraint firstAttribute="trailing" secondItem="M54-px-04s" secondAttribute="trailing" id="SBf-p2-W9v"/>
+                            <constraint firstItem="M54-px-04s" firstAttribute="top" secondItem="GLs-ix-hRY" secondAttribute="bottom" constant="8" id="U5F-dA-Jte"/>
+                            <constraint firstAttribute="trailing" secondItem="GLs-ix-hRY" secondAttribute="trailing" id="YXP-o9-Yfq"/>
+                            <constraint firstItem="M54-px-04s" firstAttribute="leading" secondItem="W8h-iq-Jsn" secondAttribute="leading" id="b5g-jF-HwI"/>
+                            <constraint firstItem="GLs-ix-hRY" firstAttribute="top" secondItem="W8h-iq-Jsn" secondAttribute="top" id="jIE-Au-ELy"/>
+                        </constraints>
+                    </stackView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Mlp-Rz-4Dd" secondAttribute="bottom" id="BY7-Rz-HIH"/>
-                <constraint firstItem="Mlp-Rz-4Dd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="JB3-it-ZHB"/>
-                <constraint firstAttribute="trailing" secondItem="Mlp-Rz-4Dd" secondAttribute="trailing" constant="8" id="Wfm-ZH-1C8"/>
-                <constraint firstItem="Mlp-Rz-4Dd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kVf-Rf-Du4"/>
+                <constraint firstAttribute="trailing" secondItem="W8h-iq-Jsn" secondAttribute="trailing" constant="2" id="UJ0-4B-2pK"/>
+                <constraint firstItem="W8h-iq-Jsn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="evx-DT-HdX"/>
+                <constraint firstItem="W8h-iq-Jsn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hJF-xl-rks"/>
+                <constraint firstAttribute="bottom" secondItem="W8h-iq-Jsn" secondAttribute="bottom" id="u50-Jf-Xa5"/>
             </constraints>
             <size key="customSize" width="182" height="275"/>
+            <connections>
+                <outlet property="movieDate" destination="A8s-TC-SO1" id="M28-tR-M5f"/>
+                <outlet property="movieImg" destination="GLs-ix-hRY" id="AuK-MN-cc2"/>
+                <outlet property="movieName" destination="hHX-Le-puZ" id="tKJ-nK-pcU"/>
+            </connections>
             <point key="canvasLocation" x="239.69465648854961" y="98.943661971830991"/>
         </collectionViewCell>
     </objects>
     <resources>
         <namedColor name="brand">
             <color red="1" green="0.10199999809265137" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="text">
+            <color red="0.062745098039215685" green="0.070588235294117646" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
