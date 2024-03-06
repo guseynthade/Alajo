@@ -15,7 +15,15 @@ class MovieCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupView()
     }
-
+    
+    fileprivate func setupView() {
+        movieImg.layer.cornerRadius = 8
+    }
+    
+    func confCell() {
+        movieName.text = "Title"
+        movieDate.text = "date"
+    }
 }
