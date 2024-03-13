@@ -51,7 +51,7 @@
                                     <constraint firstItem="eTk-ZN-omY" firstAttribute="leading" secondItem="W8g-p6-jTM" secondAttribute="leading" constant="24" id="syu-BH-nLZ"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hzh-Cx-Riu">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hzh-Cx-Riu">
                                 <rect key="frame" x="0.0" y="122" width="393" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eJU-Ln-zhd">
@@ -172,7 +172,7 @@
         <image name="search" width="24" height="24"/>
         <image name="sort" width="24" height="24"/>
         <namedColor name="bg">
-            <color red="0.86274509803921573" green="0.87058823529411766" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.86299997568130493" green="0.87099999189376831" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="brand">
             <color red="1" green="0.10199999809265137" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

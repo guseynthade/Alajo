@@ -2,7 +2,7 @@
 //  NetworkManager.swift
 //  URLSessionProject
 //
-//  Created by Fagan Aslanli on 30.01.24.
+//  Created by God's on 30.01.24.
 //
 
 import Foundation

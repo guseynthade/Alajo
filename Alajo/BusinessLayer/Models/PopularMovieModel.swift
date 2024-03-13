@@ -5,11 +5,6 @@
 //  Created by God's on 3/6/24.
 //
 
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let popularMovieModel = try? JSONDecoder().decode(PopularMovieModel.self, from: jsonData)
-
 import Foundation
 
 // MARK: - PopularMovieModel
