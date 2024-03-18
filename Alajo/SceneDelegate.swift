@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhZGMxZGI2NDBkYTE0ZjA5OTAzZmM5NzlkYmNjYmU3ZSIsInN1YiI6IjY1ZGNhMmE0MDNiZjg0MDE2MWFlZGE3YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZOO3t3M_nH-awAjBucsK5VhYzTF0WiAN2PPtKN7tDHI"
     
         let data = token.data(using: .utf8)!
-        let safeToken = KeychainHelper.saveData(data: data, ForService: "")
+        let safeToken = KeychainHelper.saveData(data: data, ForService: "token")
         
         if safeToken {
             print("token saved")

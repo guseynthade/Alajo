@@ -23,6 +23,7 @@ class MovieCell: UICollectionViewCell {
     }
     
     func confCell() {
+//        movieImg
         movieName.text = "Title"
         movieDate.text = "date"
     }

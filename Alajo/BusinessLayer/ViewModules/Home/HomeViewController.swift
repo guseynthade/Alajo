@@ -12,10 +12,9 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var mainCollection: UICollectionView!
     
     private let viewModel = HomeViewModel()
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.getPopularMovieList()
+//        viewModel.getPopularMovieList()
         setupView()
     }
     
@@ -40,6 +39,7 @@ class HomeViewController: UIViewController {
     }
     
     fileprivate func moreAction(type: HeaderType) {
+    
         print(type)
     }
 
@@ -63,38 +63,29 @@ extension HomeViewController: UICollectionViewDelegate,
         
         return cell
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+//        return CGSize(width: collectionView.bounds.width, height: 200)
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: 48)
     }
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             let reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderCollectionReusableView", for: indexPath) as! HeaderCollectionReusableView
-//            reusableview.confHeader(type: indexPath.section == 0 ? .today : indexPath.section == 1 ? .thisWeek : indexPath.section == 2 ? .popular : .topRated)
-//            reusableview.moreButton.tag = indexPath.section
-//            reusableview.type = indexPath.section == 0 ? .today : indexPath.section == 1 ? .thisWeek : indexPath.section == 2 ? .popular : .topRated)
-            reusableview.moreCallBack = { [weak self] type in
+            reusableview.confHeader(type: viewModel.setHeader(index: indexPath.section))
+            
+            reusableview.moreCallBack = { [weak self] in
                 guard let self = self else {return}
-                self.moreAction(type: type)
-                print(type)
+                let type = viewModel.setHeader(index: indexPath.section)
+                moreAction(type: type)
             }
-            var headerType: HeaderType
                     
-                    switch indexPath.section {
-                    case 0:
-                        headerType = .today
-                    case 1:
-                        headerType = .thisWeek
-                    case 2:
-                        headerType = .popular
-                    case 3:
-                        headerType = .topRated
-                    default:
-                        headerType = .today
-                    }
-//                    
-                    reusableview.confHeader()
+                    
                 return reusableview
 
 

@@ -1,16 +1,16 @@
 //
-//  PopularMovieModel.swift
+//  TopRatedMovieModel.swift
 //  Alajo
 //
-//  Created by God's on 3/6/24.
+//  Created by God's on 3/17/24.
 //
 
 import Foundation
 
-// MARK: - PopularMovieModel
-struct PopularMovieModel: Codable {
+// MARK: - TopRatedMovieModel
+struct TopRatedMovieModel: Codable {
     let page: Int
-    let results: [PopularResult]
+    let results: [RatedResult]
     let totalPages, totalResults: Int
 
     enum CodingKeys: String, CodingKey {
@@ -20,8 +20,8 @@ struct PopularMovieModel: Codable {
     }
 }
 
-// MARK: - MovieResult
-struct PopularResult: Codable {
+// MARK: - Result
+struct RatedResult: Codable {
     let adult: Bool
     let backdropPath: String
     let genreIDS: [Int]

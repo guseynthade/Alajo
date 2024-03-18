@@ -20,46 +20,17 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var moreButton: UIButton!
     
     @IBAction func moreAction(_ sender: UIButton) {
-        moreCallBack?(type)
-        print(type)
-        
-//        switch sender.tag {
-//        case 0:
-//            print("today")
-//        case 1:
-//            print("this week")
-//        case 2:
-//            print("popular")
-//        case 3:
-//            print("top rated")
-//        default:
-//            break
-//        }
-//        print(#function)
+        moreCallBack?()
     }
     
-    
-    var type: HeaderType = .today
-    
-    var moreCallBack: ((HeaderType) -> ())?
+    var moreCallBack: (() -> ())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func confHeader() {
+    func confHeader(type: HeaderType) {
         titleMovie.text = type.rawValue
-        
-        switch type {
-        case .today:
-            print("today")
-        case .thisWeek:
-            print("this week")
-        case .popular:
-            print("popular")
-        case .topRated:
-            print("top rated")
-        }
     }
     
 }

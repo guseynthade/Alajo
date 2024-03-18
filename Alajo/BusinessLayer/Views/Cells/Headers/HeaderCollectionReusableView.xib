@@ -15,14 +15,14 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7T-oG-lvH">
-                    <rect key="frame" x="16" y="0.0" width="60" height="29"/>
+                    <rect key="frame" x="24" y="0.0" width="60" height="29"/>
                     <color key="tintColor" name="text"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                     <color key="textColor" name="text"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="right" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5k-jW-Sif">
-                    <rect key="frame" x="225" y="6" width="64" height="20"/>
+                    <rect key="frame" x="217" y="6" width="64" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="7PJ-dl-fwj"/>
                     </constraints>
@@ -39,10 +39,10 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <color key="tintColor" name="brand"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="y5k-jW-Sif" secondAttribute="trailing" constant="16" id="RcV-7u-UDE"/>
+                <constraint firstAttribute="trailing" secondItem="y5k-jW-Sif" secondAttribute="trailing" constant="24" id="RcV-7u-UDE"/>
                 <constraint firstItem="D7T-oG-lvH" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Z5n-fh-bxv"/>
                 <constraint firstItem="y5k-jW-Sif" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="6" id="sAv-gW-PJi"/>
-                <constraint firstItem="D7T-oG-lvH" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="16" id="ugF-rM-36F"/>
+                <constraint firstItem="D7T-oG-lvH" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="24" id="ugF-rM-36F"/>
             </constraints>
             <connections>
                 <outlet property="moreButton" destination="y5k-jW-Sif" id="Rqp-6l-mur"/>

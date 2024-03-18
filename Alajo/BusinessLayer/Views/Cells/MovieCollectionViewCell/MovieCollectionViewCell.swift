@@ -11,6 +11,8 @@ class MovieCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private weak var movieCollection: UICollectionView!
     
+    var movieList: [MovieCellProtocol] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()

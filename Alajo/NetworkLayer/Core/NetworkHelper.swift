@@ -28,7 +28,7 @@ class NetworkHelper {
     private let baseURL = "https://api.themoviedb.org/3/"
     let header = [
         "accept": "application/json",
-        "Authorization": "Bearer \(KeychainHelper.retrieveData(forService: "token")?.base64EncodedString() ?? "")"
+        "Authorization": "Bearer \(String(data: KeychainHelper.retrieveData(forService: "token")!, encoding: .utf8) ?? "") "
     ]
     
     func requestURL(url: String) -> String {

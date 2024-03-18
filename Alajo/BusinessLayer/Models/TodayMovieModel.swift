@@ -1,16 +1,16 @@
 //
-//  PopularMovieModel.swift
+//  TodayMovieModel.swift
 //  Alajo
 //
-//  Created by God's on 3/6/24.
+//  Created by God's on 3/17/24.
 //
 
 import Foundation
 
-// MARK: - PopularMovieModel
-struct PopularMovieModel: Codable {
+// MARK: - TodayMovieModel
+struct TodayMovieModel: Codable {
     let page: Int
-    let results: [PopularResult]
+    let results: [TodayResult]
     let totalPages, totalResults: Int
 
     enum CodingKeys: String, CodingKey {
@@ -20,15 +20,17 @@ struct PopularMovieModel: Codable {
     }
 }
 
-// MARK: - MovieResult
-struct PopularResult: Codable {
+// MARK: - Result
+struct TodayResult: Codable {
     let adult: Bool
     let backdropPath: String
-    let genreIDS: [Int]
     let id: Int
-    let originalLanguage, originalTitle, overview: String
+    let title, originalLanguage, originalTitle, overview: String
+    let posterPath: String
+    let mediaType: String
+    let genreIDS: [Int]
     let popularity: Double
-    let posterPath, releaseDate, title: String
+    let releaseDate: String
     let video: Bool
     let voteAverage: Double
     let voteCount: Int
@@ -36,15 +38,18 @@ struct PopularResult: Codable {
     enum CodingKeys: String, CodingKey {
         case adult
         case backdropPath = "backdrop_path"
-        case genreIDS = "genre_ids"
-        case id
+        case id, title
         case originalLanguage = "original_language"
         case originalTitle = "original_title"
-        case overview, popularity
+        case overview
         case posterPath = "poster_path"
+        case mediaType = "media_type"
+        case genreIDS = "genre_ids"
+        case popularity
         case releaseDate = "release_date"
-        case title, video
+        case video
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
 }
+
