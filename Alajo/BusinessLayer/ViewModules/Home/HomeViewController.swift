@@ -9,14 +9,20 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet private weak var feedMovie: UIView!
+    @IBOutlet private weak var movieImage: UIImageView!
+    @IBOutlet private weak var footView: UIView!
     @IBOutlet private weak var mainCollection: UICollectionView!
     
     private let viewModel = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        viewModel.getPopularMovieList()
         setupView()
+        
     }
+    
     
     fileprivate func setupView() {
         confViewModel()
@@ -24,6 +30,14 @@ class HomeViewController: UIViewController {
         mainCollection.dataSource = self
         mainCollection.register(UINib(nibName: "HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderCollectionReusableView")
         mainCollection.registerNib(with: "MovieCollectionViewCell")
+        
+        feedMovie.layer.cornerRadius = 8
+        
+        movieImage.layer.cornerRadius = 8
+        
+        footView.layer.cornerRadius = 8
+        
+        footView.alpha = 0.5
     }
     
     fileprivate func confViewModel() {
@@ -41,6 +55,12 @@ class HomeViewController: UIViewController {
     fileprivate func moreAction(type: HeaderType) {
     
         print(type)
+    }
+    
+    fileprivate func relodeCollectionView() {
+        DispatchQueue.main.async {
+            self.mainCollection.reloadData()
+        }
     }
 
 }
@@ -60,13 +80,9 @@ extension HomeViewController: UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeCell(cellClass: MovieCollectionViewCell.self, indexPath: indexPath)
-        
+        cell.setList(list: viewModel.getMovieList())
         return cell
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-//        return CGSize(width: collectionView.bounds.width, height: 200)
-//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: 48)
@@ -94,7 +110,7 @@ extension HomeViewController: UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.4)
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.68)
     }
     
 }

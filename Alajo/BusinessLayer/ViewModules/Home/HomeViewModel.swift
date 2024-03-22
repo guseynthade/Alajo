@@ -14,10 +14,11 @@ protocol HomeProtocol: AnyObject {
 
 final class HomeViewModel {
     
-    private var popularList: PopularMovieModel?
-    private var todayList: TodayMovieModel?
-    private var weekList: ThisWeekMovieModel?
-    private var ratedList: TopRatedMovieModel?
+    private var popularList: [PopularResult]?
+    private var todayList: [TodayResult]?
+    private var weekList: [WeekResult]?
+    private var ratedList: [RatedResult]?
+    private var movieList: [MovieCellProtocol] = []
     var successCallback: (() -> Void)?
     var errorCallback: ((String) -> Void)?
     
@@ -27,15 +28,23 @@ final class HomeViewModel {
         switch index {
         case 0:
             getTodayMovieList()
+            guard let list = todayList else {return .today}
+            movieList = list
             headerType = .today
         case 1:
             getThisWeekMovieList()
+            guard let list = weekList else {return .thisWeek}
+            movieList = list
             headerType = .thisWeek
         case 2:
             getPopularMovieList()
+            guard let list = popularList else {return .popular}
+            movieList = list
             headerType = .popular
         case 3:
             getTopRatedMovieList()
+            guard let list = ratedList else {return .topRated}
+            movieList = list
             headerType = .topRated
         default:
             headerType = .today
@@ -43,6 +52,11 @@ final class HomeViewModel {
         }
         return headerType
     }
+    
+    func getMovieList() -> [MovieCellProtocol] {
+        return movieList
+    }
+    
     // MARK: Network
     
     func getPopularMovieList() {
@@ -51,7 +65,7 @@ final class HomeViewModel {
             
             if let errorString = errorString {
                 self.errorCallback?(errorString)
-            } else if let responseData = responseData {
+            } else if let responseData = responseData?.results {
                 self.popularList = responseData
                 self.successCallback?()
             }
@@ -64,7 +78,7 @@ final class HomeViewModel {
             
             if let errorString = errorString {
                 self.errorCallback?(errorString)
-            } else if let responseData = responseData {
+            } else if let responseData = responseData?.results {
                 self.todayList = responseData
                 self.successCallback?()
             }
@@ -77,7 +91,7 @@ final class HomeViewModel {
             
             if let errorString = errorString {
                 self.errorCallback?(errorString)
-            } else if let responseData = responseData {
+            } else if let responseData = responseData?.results {
                 self.weekList = responseData
                 self.successCallback?()
             }
@@ -90,7 +104,7 @@ final class HomeViewModel {
             
             if let errorString = errorString {
                 self.errorCallback?(errorString)
-            } else if let responseData = responseData {
+            } else if let responseData = responseData?.results {
                 self.ratedList = responseData
                 self.successCallback?()
             }

@@ -7,6 +7,12 @@
 
 import UIKit
 
+protocol MovieCellProtocol {
+    var nameTitle: String {get}
+    var dateTitle: String {get}
+    var imgTitle: String {get}
+}
+
 class MovieCell: UICollectionViewCell {
     
     @IBOutlet private weak var movieImg: UIImageView!
@@ -22,9 +28,9 @@ class MovieCell: UICollectionViewCell {
         movieImg.layer.cornerRadius = 8
     }
     
-    func confCell() {
-//        movieImg
-        movieName.text = "Title"
-        movieDate.text = "date"
+    func confCell(model: MovieCellProtocol) {
+        
+        movieName.text = model.nameTitle
+        movieDate.text = model.dateTitle
     }
 }

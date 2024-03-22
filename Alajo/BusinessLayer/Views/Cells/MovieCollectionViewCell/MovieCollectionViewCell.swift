@@ -11,12 +11,17 @@ class MovieCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private weak var movieCollection: UICollectionView!
     
-    var movieList: [MovieCellProtocol] = []
+    private var movieList: [MovieCellProtocol] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()
 
+    }
+    
+    func setList(list: [MovieCellProtocol]) {
+        movieList = list
+        movieCollection.reloadData()
     }
     
     fileprivate func setupView() {
@@ -35,13 +40,14 @@ extension MovieCollectionViewCell: UICollectionViewDelegate,
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return movieList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeCell(cellClass: MovieCell.self, indexPath: indexPath)
-        cell.confCell()
+        let model = movieList[indexPath.row]
+        cell.confCell(model: model)
         return cell
     }
     

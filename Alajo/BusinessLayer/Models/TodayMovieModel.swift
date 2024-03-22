@@ -21,7 +21,19 @@ struct TodayMovieModel: Codable {
 }
 
 // MARK: - Result
-struct TodayResult: Codable {
+struct TodayResult: Codable, MovieCellProtocol {
+    var nameTitle: String {
+        originalTitle
+    }
+    
+    var dateTitle: String {
+        releaseDate
+    }
+    
+    var imgTitle: String {
+        ""
+    }
+    
     let adult: Bool
     let backdropPath: String
     let id: Int

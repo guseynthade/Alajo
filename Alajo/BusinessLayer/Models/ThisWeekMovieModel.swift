@@ -21,7 +21,18 @@ struct ThisWeekMovieModel: Codable {
 }
 
 // MARK: - Result
-struct WeekResult: Codable {
+struct WeekResult: Codable , MovieCellProtocol {
+    var nameTitle: String {
+        originalTitle
+    }
+    
+    var dateTitle: String {
+        releaseDate
+    }
+    
+    var imgTitle: String {
+        ""
+    }
     let adult: Bool
     let backdropPath: String
     let id: Int
