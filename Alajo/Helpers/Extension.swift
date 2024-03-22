@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 extension UICollectionView {
 func registerNib(with identifier: String)
@@ -40,4 +41,17 @@ func dequeCell<T>(cellClass : T.Type, indexPath: IndexPath) -> T where T: UITabl
  let identifier = String(describing: T.self)
  return dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! T
 }
+}
+
+extension UIImageView {
+    
+    func loadURL(_ url: String) {
+        let urlString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        
+        if let url = URL(string:  urlString) {
+            sd_setImage(with: url)
+        }
+        
+    }
+    
 }

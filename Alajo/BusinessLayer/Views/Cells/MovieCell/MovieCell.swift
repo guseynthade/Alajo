@@ -29,7 +29,7 @@ class MovieCell: UICollectionViewCell {
     }
     
     func confCell(model: MovieCellProtocol) {
-        
+        movieImg.loadURL(model.imgTitle)
         movieName.text = model.nameTitle
         movieDate.text = model.dateTitle
     }

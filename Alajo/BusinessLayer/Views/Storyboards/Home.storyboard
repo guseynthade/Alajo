@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8g-p6-jTM">
-                                <rect key="frame" x="24" y="66" width="345" height="426"/>
+                                <rect key="frame" x="24" y="59" width="345" height="426"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie" translatesAutoresizingMaskIntoConstraints="NO" id="2Ae-9k-L98">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="426"/>
@@ -70,7 +70,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hzh-Cx-Riu">
-                                <rect key="frame" x="0.0" y="516" width="393" height="336"/>
+                                <rect key="frame" x="0.0" y="509" width="393" height="343"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eJU-Ln-zhd">
                                     <size key="itemSize" width="128" height="128"/>
@@ -91,7 +91,7 @@
                             <constraint firstItem="W8g-p6-jTM" firstAttribute="leading" secondItem="atu-Pd-M2h" secondAttribute="leading" constant="24" id="skU-od-7xy"/>
                             <constraint firstItem="Hzh-Cx-Riu" firstAttribute="bottom" secondItem="RBC-oM-pjQ" secondAttribute="bottom" id="szm-O6-6pI"/>
                             <constraint firstItem="Hzh-Cx-Riu" firstAttribute="trailing" secondItem="atu-Pd-M2h" secondAttribute="trailing" id="v03-UW-IXm"/>
-                            <constraint firstItem="W8g-p6-jTM" firstAttribute="top" secondItem="RBC-oM-pjQ" secondAttribute="top" constant="66" id="wHm-qY-K1a"/>
+                            <constraint firstItem="W8g-p6-jTM" firstAttribute="top" secondItem="atu-Pd-M2h" secondAttribute="top" id="wHm-qY-K1a"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="home" id="kjO-fm-2iz">

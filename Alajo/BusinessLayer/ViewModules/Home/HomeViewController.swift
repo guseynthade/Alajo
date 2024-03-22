@@ -92,6 +92,7 @@ extension HomeViewController: UICollectionViewDelegate,
 
         switch kind {
         case UICollectionView.elementKindSectionHeader:
+            if indexPath.row == 0 {}
             let reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderCollectionReusableView", for: indexPath) as! HeaderCollectionReusableView
             reusableview.confHeader(type: viewModel.setHeader(index: indexPath.section))
             
@@ -110,7 +111,7 @@ extension HomeViewController: UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.68)
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.98)
     }
     
 }
