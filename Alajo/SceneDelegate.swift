@@ -36,7 +36,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
 //        if UserDefaultsHelper.getBool(key: Constant.UD_IS_LOGIN_KEY) {
-//                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "QuestionsViewController") as? QuestionsViewController ?? QuestionsViewController()
+//                    let vc = UIStoryboard.init(name: "Home", bundle: Bundle.main).instantiateViewController(withIdentifier: "QuestionsViewController") as? QuestionsViewController ?? QuestionsViewController()
 //                    // Set the new root view controller
 //                    let navigationController = UINavigationController(rootViewController: vc)
 //        //            navigationController.popToRootViewController(animated: true)

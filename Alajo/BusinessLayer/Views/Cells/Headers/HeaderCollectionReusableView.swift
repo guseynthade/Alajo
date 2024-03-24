@@ -21,6 +21,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     @IBAction func moreAction(_ sender: UIButton) {
         moreCallBack?()
+        print(#function)
     }
     
     var moreCallBack: (() -> ())?

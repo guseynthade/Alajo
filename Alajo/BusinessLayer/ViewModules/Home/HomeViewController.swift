@@ -29,15 +29,16 @@ class HomeViewController: UIViewController {
         mainCollection.delegate = self
         mainCollection.dataSource = self
         mainCollection.register(UINib(nibName: "HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderCollectionReusableView")
+        mainCollection.register(FeedCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "FeedCollectionReusableView")
         mainCollection.registerNib(with: "MovieCollectionViewCell")
         
-        feedMovie.layer.cornerRadius = 8
-        
-        movieImage.layer.cornerRadius = 8
-        
-        footView.layer.cornerRadius = 8
-        
-        footView.alpha = 0.5
+//        feedMovie.layer.cornerRadius = 8
+//        
+//        movieImage.layer.cornerRadius = 8
+//        
+//        footView.layer.cornerRadius = 8
+//        
+//        footView.alpha = 0.92
     }
     
     fileprivate func confViewModel() {
@@ -85,6 +86,12 @@ extension HomeViewController: UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+//        if section == 0 {
+//            return CGSize(width: collectionView.bounds.width, height: 200)
+//        } else {
+//            return CGSize(width: collectionView.bounds.width, height: 48)
+//        }
         return CGSize(width: collectionView.bounds.width, height: 48)
     }
     
@@ -92,7 +99,20 @@ extension HomeViewController: UICollectionViewDelegate,
 
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            if indexPath.row == 0 {}
+//            if indexPath.section == 0 {
+//                        let reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "FeedCollectionReusableView", for: indexPath) as! FeedCollectionReusableView
+//                        return reusableview
+//                    } else {
+//                        let reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderCollectionReusableView", for: indexPath) as! HeaderCollectionReusableView
+//                        reusableview.confHeader(type: viewModel.setHeader(index: indexPath.section))
+//                        
+//                        reusableview.moreCallBack = { [weak self] in
+//                            guard let self = self else {return}
+//                            let type = viewModel.setHeader(index: indexPath.section)
+//                            self.moreAction(type: type)
+//                        }
+//                        return reusableview
+//                    }
             let reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderCollectionReusableView", for: indexPath) as! HeaderCollectionReusableView
             reusableview.confHeader(type: viewModel.setHeader(index: indexPath.section))
             
@@ -108,10 +128,17 @@ extension HomeViewController: UICollectionViewDelegate,
 
         default:  fatalError("Unexpected element kind")
         }
+        
+//        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.98)
+//        if indexPath.section == 0 {
+//            return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.4)
+//        } else {
+//            return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.5)
+//        }
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.43)
     }
     
 }
