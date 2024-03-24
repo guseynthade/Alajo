@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,37 +14,68 @@
             <rect key="frame" x="0.0" y="0.0" width="270" height="353"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zpv-gh-pLS">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie" translatesAutoresizingMaskIntoConstraints="NO" id="Zpv-gh-pLS">
                     <rect key="frame" x="0.0" y="0.0" width="270" height="353"/>
                     <color key="backgroundColor" name="brand"/>
                 </imageView>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rJP-o3-6EL">
-                    <rect key="frame" x="0.0" y="214" width="270" height="128"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hL4-kk-NMU">
+                    <rect key="frame" x="12" y="293" width="246" height="48"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AxD-ua-4w4">
+                            <rect key="frame" x="12" y="0.0" width="222" height="48"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUW-n0-gYg">
+                                    <rect key="frame" x="98.666666666666671" y="0.0" width="25" height="21.666666666666668"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" name="text"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 Feb 2024 Comedy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bu-vb-u2a">
+                                    <rect key="frame" x="55.999999999999993" y="25.666666666666686" width="110.33333333333331" height="22.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <color key="textColor" name="text"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="bg"/>
+                    <constraints>
+                        <constraint firstItem="AxD-ua-4w4" firstAttribute="leading" secondItem="hL4-kk-NMU" secondAttribute="leading" constant="12" id="I5T-gX-6ST"/>
+                        <constraint firstAttribute="bottom" secondItem="AxD-ua-4w4" secondAttribute="bottom" id="NaK-XC-jWw"/>
+                        <constraint firstAttribute="height" constant="48" id="Np5-sy-72L"/>
+                        <constraint firstItem="AxD-ua-4w4" firstAttribute="top" secondItem="hL4-kk-NMU" secondAttribute="top" id="S64-Md-1aj"/>
+                        <constraint firstAttribute="trailing" secondItem="AxD-ua-4w4" secondAttribute="trailing" constant="12" id="WtD-tr-fzd"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Zpv-gh-pLS" secondAttribute="bottom" id="BY6-Mz-qne"/>
                 <constraint firstItem="Zpv-gh-pLS" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="KIK-l2-Rxg"/>
-                <constraint firstAttribute="bottom" secondItem="rJP-o3-6EL" secondAttribute="bottom" id="bCo-Xl-Ol2"/>
                 <constraint firstAttribute="trailing" secondItem="Zpv-gh-pLS" secondAttribute="trailing" id="eSg-Bf-TGU"/>
-                <constraint firstItem="rJP-o3-6EL" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="l0z-x1-zq2"/>
+                <constraint firstItem="hL4-kk-NMU" firstAttribute="bottom" secondItem="VXr-Tz-HHm" secondAttribute="bottom" constant="-12" id="g7p-NS-NLh"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="hL4-kk-NMU" secondAttribute="trailing" constant="12" id="hLU-ll-62e"/>
                 <constraint firstItem="Zpv-gh-pLS" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="qd3-xo-k2o"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="rJP-o3-6EL" secondAttribute="trailing" id="zgQ-Rb-gQ2"/>
+                <constraint firstItem="hL4-kk-NMU" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="12" id="rsN-TX-aHU"/>
             </constraints>
             <connections>
                 <outlet property="image" destination="Zpv-gh-pLS" id="kPR-Rj-jGz"/>
+                <outlet property="labelView" destination="hL4-kk-NMU" id="36c-Vd-hsJ"/>
             </connections>
             <point key="canvasLocation" x="76.33587786259541" y="126.40845070422536"/>
         </collectionReusableView>
     </objects>
     <resources>
+        <image name="movie" width="360" height="450"/>
+        <namedColor name="bg">
+            <color red="0.86299997568130493" green="0.87099999189376831" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="brand">
             <color red="1" green="0.10199999809265137" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="text">
+            <color red="0.063000001013278961" green="0.071000002324581146" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>
