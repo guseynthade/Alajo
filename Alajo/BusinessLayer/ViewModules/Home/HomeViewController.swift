@@ -118,8 +118,8 @@ extension HomeViewController: UICollectionViewDelegate,
             
             reusableview.moreCallBack = { [weak self] in
                 guard let self = self else {return}
-                let type = viewModel.setHeader(index: indexPath.section)
-                moreAction(type: type)
+                let type = self.viewModel.setHeader(index: indexPath.section)
+                self.moreAction(type: type)
             }
                     
                     
