@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -105,10 +106,29 @@
                                     <outlet property="delegate" destination="Glh-CH-VXx" id="x6z-7s-uED"/>
                                 </connections>
                             </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qug-nd-Rgm">
+                                <rect key="frame" x="0.0" y="139" width="393" height="630"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Gj-aL-y4Y">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Glh-CH-VXx" id="JRV-qK-1YQ"/>
+                                    <outlet property="delegate" destination="Glh-CH-VXx" id="H9p-2n-kZJ"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zaB-Zc-wry"/>
                         <color key="backgroundColor" name="bg"/>
                         <constraints>
+                            <constraint firstItem="zaB-Zc-wry" firstAttribute="bottom" secondItem="qug-nd-Rgm" secondAttribute="bottom" id="0hU-ko-5vW"/>
+                            <constraint firstItem="qug-nd-Rgm" firstAttribute="top" secondItem="n77-ov-g3Y" secondAttribute="bottom" constant="24" id="BuF-bf-ZdY"/>
+                            <constraint firstItem="zaB-Zc-wry" firstAttribute="trailing" secondItem="qug-nd-Rgm" secondAttribute="trailing" id="HxS-sO-GEA"/>
+                            <constraint firstItem="qug-nd-Rgm" firstAttribute="leading" secondItem="zaB-Zc-wry" secondAttribute="leading" id="SFv-in-fQn"/>
                             <constraint firstItem="n77-ov-g3Y" firstAttribute="leading" secondItem="zaB-Zc-wry" secondAttribute="leading" constant="24" id="adW-pQ-RkF"/>
                             <constraint firstItem="zaB-Zc-wry" firstAttribute="trailing" secondItem="n77-ov-g3Y" secondAttribute="trailing" constant="24" id="q8V-qG-GmV"/>
                             <constraint firstItem="n77-ov-g3Y" firstAttribute="top" secondItem="zaB-Zc-wry" secondAttribute="top" id="vfE-p7-aaC"/>
@@ -118,6 +138,7 @@
                         <color key="badgeColor" name="brand"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="searchCollection" destination="qug-nd-Rgm" id="jYT-h4-rSs"/>
                         <outlet property="searchField" destination="n77-ov-g3Y" id="ZZx-vP-Vw2"/>
                     </connections>
                 </viewController>

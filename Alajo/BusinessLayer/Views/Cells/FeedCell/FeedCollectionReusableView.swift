@@ -13,8 +13,13 @@ class FeedCollectionReusableView: UICollectionReusableView {
     @IBOutlet private weak var labelView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        labelView.layer.cornerRadius = 8
+        setupView()
+        
+    }
+    
+    fileprivate func setupView() {
+        image.layer.cornerRadius = 8
+        labelView.alpha = 0.8
     }
     
 }

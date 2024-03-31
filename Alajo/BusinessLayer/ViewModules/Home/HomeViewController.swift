@@ -8,17 +8,14 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    //
-    //    @IBOutlet private weak var feedMovie: UIView!
-    //    @IBOutlet private weak var movieImage: UIImageView!
-    //    @IBOutlet private weak var footView: UIView!
+
     @IBOutlet private weak var mainCollection: UICollectionView!
     
     private let viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        viewModel.getPopularMovieList()
+                viewModel.getPopularMovieList()
         setupView()
         
     }
@@ -31,14 +28,6 @@ class HomeViewController: UIViewController {
         mainCollection.register(UINib(nibName: "HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderCollectionReusableView")
         mainCollection.register(UINib(nibName: "FeedCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "FeedCollectionReusableView")
         mainCollection.registerNib(with: "MovieCollectionViewCell")
-        
-        //        feedMovie.layer.cornerRadius = 8
-        //
-        //        movieImage.layer.cornerRadius = 8
-        //
-        //        footView.layer.cornerRadius = 8
-        //
-        //        footView.alpha = 0.92
     }
     
     fileprivate func confViewModel() {
@@ -88,7 +77,7 @@ extension HomeViewController: UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
         if section == 0 {
-            return CGSize(width: collectionView.bounds.width, height: 240)
+            return CGSize(width: collectionView.bounds.width, height: 380)
         } else {
             return CGSize(width: collectionView.bounds.width, height: 48)
         }
@@ -121,12 +110,12 @@ extension HomeViewController: UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //        if indexPath.section == 0 {
-        //            return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.4)
-        //        } else {
-        //            return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.5)
-        //        }
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.43)
+                if indexPath.section == 0 {
+                    return CGSize(width: 0, height: 24)
+                } else {
+                    return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.43)
+                }
+//        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.43)
     }
     
 }

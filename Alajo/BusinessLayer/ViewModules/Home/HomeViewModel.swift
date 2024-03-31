@@ -18,6 +18,7 @@ final class HomeViewModel {
     private var todayList: [TodayResult]?
     private var weekList: [WeekResult]?
     private var ratedList: [RatedResult]?
+    private var searchList: [SearchResult]?
     private var movieList: [MovieCellProtocol] = []
     var successCallback: (() -> Void)?
     var errorCallback: ((String) -> Void)?
@@ -26,22 +27,22 @@ final class HomeViewModel {
     
     func setHeader(index: Int) -> HeaderType {
         switch index {
-        case 0:
+        case 1:
             getTodayMovieList()
             guard let list = todayList else {return .today}
             movieList = list
             headerType = .today
-        case 1:
+        case 2:
             getThisWeekMovieList()
             guard let list = weekList else {return .thisWeek}
             movieList = list
             headerType = .thisWeek
-        case 2:
+        case 3:
             getPopularMovieList()
             guard let list = popularList else {return .popular}
             movieList = list
             headerType = .popular
-        case 3:
+        case 4:
             getTopRatedMovieList()
             guard let list = ratedList else {return .topRated}
             movieList = list
@@ -106,6 +107,19 @@ final class HomeViewModel {
                 self.errorCallback?(errorString)
             } else if let responseData = responseData?.results {
                 self.ratedList = responseData
+                self.successCallback?()
+            }
+        }
+    }
+    
+    func getSearchList(text: String) {
+        SearchManager.shared.getSearchList(query: text) { [weak self] responseData, errorString in
+            guard let self = self else {return}
+            
+            if let errorString = errorString {
+                self.errorCallback?(errorString)
+            } else if let responseData = responseData?.results {
+                self.searchList = responseData
                 self.successCallback?()
             }
         }

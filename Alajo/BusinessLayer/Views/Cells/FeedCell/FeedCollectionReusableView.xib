@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,28 +12,28 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeedCollectionReusableView" id="U6b-Vx-4bR" customClass="FeedCollectionReusableView" customModule="Alajo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="270" height="353"/>
+            <rect key="frame" x="0.0" y="0.0" width="270" height="319"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie" translatesAutoresizingMaskIntoConstraints="NO" id="Zpv-gh-pLS">
-                    <rect key="frame" x="0.0" y="0.0" width="270" height="353"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie" translatesAutoresizingMaskIntoConstraints="NO" id="Zpv-gh-pLS">
+                    <rect key="frame" x="24" y="0.0" width="222" height="319"/>
                     <color key="backgroundColor" name="brand"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hL4-kk-NMU">
-                    <rect key="frame" x="12" y="293" width="246" height="48"/>
+                    <rect key="frame" x="24" y="221.33333333333334" width="222" height="63.666666666666657"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AxD-ua-4w4">
-                            <rect key="frame" x="12" y="0.0" width="222" height="48"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AxD-ua-4w4">
+                            <rect key="frame" x="0.0" y="0.0" width="222" height="63.666666666666664"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUW-n0-gYg">
-                                    <rect key="frame" x="98.666666666666671" y="0.0" width="25" height="21.666666666666668"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <rect key="frame" x="93.666666666666671" y="0.0" width="34.666666666666671" height="38.333333333333336"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <color key="textColor" name="text"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 Feb 2024 Comedy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bu-vb-u2a">
-                                    <rect key="frame" x="55.999999999999993" y="25.666666666666686" width="110.33333333333331" height="22.333333333333329"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <rect key="frame" x="48.333333333333336" y="38.333333333333343" width="125.33333333333331" height="25.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                     <color key="textColor" name="text"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -41,29 +42,29 @@
                     </subviews>
                     <color key="backgroundColor" name="bg"/>
                     <constraints>
-                        <constraint firstItem="AxD-ua-4w4" firstAttribute="leading" secondItem="hL4-kk-NMU" secondAttribute="leading" constant="12" id="I5T-gX-6ST"/>
-                        <constraint firstAttribute="bottom" secondItem="AxD-ua-4w4" secondAttribute="bottom" id="NaK-XC-jWw"/>
-                        <constraint firstAttribute="height" constant="48" id="Np5-sy-72L"/>
-                        <constraint firstItem="AxD-ua-4w4" firstAttribute="top" secondItem="hL4-kk-NMU" secondAttribute="top" id="S64-Md-1aj"/>
-                        <constraint firstAttribute="trailing" secondItem="AxD-ua-4w4" secondAttribute="trailing" constant="12" id="WtD-tr-fzd"/>
+                        <constraint firstItem="AxD-ua-4w4" firstAttribute="leading" secondItem="hL4-kk-NMU" secondAttribute="leading" id="5CQ-aB-NaS"/>
+                        <constraint firstAttribute="bottom" secondItem="AxD-ua-4w4" secondAttribute="bottom" id="GU3-zK-BQc"/>
+                        <constraint firstAttribute="trailing" secondItem="AxD-ua-4w4" secondAttribute="trailing" id="Qsv-6T-fv2"/>
+                        <constraint firstItem="AxD-ua-4w4" firstAttribute="top" secondItem="hL4-kk-NMU" secondAttribute="top" id="rvx-ES-eMB"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <constraints>
+                <constraint firstItem="hL4-kk-NMU" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="24" id="5uQ-5h-zr9"/>
                 <constraint firstAttribute="bottom" secondItem="Zpv-gh-pLS" secondAttribute="bottom" id="BY6-Mz-qne"/>
-                <constraint firstItem="Zpv-gh-pLS" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="KIK-l2-Rxg"/>
-                <constraint firstAttribute="trailing" secondItem="Zpv-gh-pLS" secondAttribute="trailing" id="eSg-Bf-TGU"/>
-                <constraint firstItem="hL4-kk-NMU" firstAttribute="bottom" secondItem="VXr-Tz-HHm" secondAttribute="bottom" constant="-12" id="g7p-NS-NLh"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="hL4-kk-NMU" secondAttribute="trailing" constant="12" id="hLU-ll-62e"/>
+                <constraint firstItem="Zpv-gh-pLS" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="24" id="KIK-l2-Rxg"/>
+                <constraint firstItem="hL4-kk-NMU" firstAttribute="height" secondItem="Zpv-gh-pLS" secondAttribute="height" multiplier="0.2" id="MO1-vC-fZl"/>
+                <constraint firstAttribute="trailing" secondItem="Zpv-gh-pLS" secondAttribute="trailing" constant="24" id="eSg-Bf-TGU"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="hL4-kk-NMU" secondAttribute="trailing" constant="24" id="jfH-AL-Pn8"/>
                 <constraint firstItem="Zpv-gh-pLS" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="qd3-xo-k2o"/>
-                <constraint firstItem="hL4-kk-NMU" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="12" id="rsN-TX-aHU"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="hL4-kk-NMU" secondAttribute="bottom" id="xKL-OQ-csr"/>
             </constraints>
             <connections>
                 <outlet property="image" destination="Zpv-gh-pLS" id="kPR-Rj-jGz"/>
                 <outlet property="labelView" destination="hL4-kk-NMU" id="36c-Vd-hsJ"/>
             </connections>
-            <point key="canvasLocation" x="76.33587786259541" y="126.40845070422536"/>
+            <point key="canvasLocation" x="76.33587786259541" y="114.43661971830987"/>
         </collectionReusableView>
     </objects>
     <resources>
